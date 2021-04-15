@@ -1,0 +1,32 @@
+#include<stdio.h>
+#include<string.h>
+
+int main()
+{
+    int m,n,o,x=0;
+    char str[1001];
+    printf("enter input:");
+    scanf("%s",str);
+    int len=strlen(str);
+    int mid=len/2;
+        for(m=len;m>0;m--)
+        {
+            for(n=0;n<m;n++)
+            {
+            if(x+n<=len-2)
+                printf(" ");
+              
+            for(o=0;o<=x;o++)
+            {
+                 if(x+n>len-2&&x+n<=len)
+                if(mid+o>len-1)
+                    printf("%c ",str[(mid+o)-len]);
+                else
+                printf("%c",str[mid+o]);
+            }
+            }
+            printf("\n");
+            x++;
+        }
+    return 0;
+}
